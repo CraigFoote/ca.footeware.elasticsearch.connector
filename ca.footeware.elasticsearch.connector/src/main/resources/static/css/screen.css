@@ -1,0 +1,72 @@
+@CHARSET "UTF-8";
+
+@font-face {
+	font-family: AceRecords;
+	src: url(../fonts/AceRecords.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: gradient;
+	src: url(../fonts/NeoBulletin_Gradient.ttf) format("truetype");
+}
+
+body {
+	background-image: url("../images/paper.png");
+	font-family: sans-serif;
+}
+
+h1 {
+	text-align: center;
+	font-family: AceRecords;
+	letter-spacing: 0.3em;
+}
+
+section {
+	width: 80%;
+	margin: auto;
+	background-color: rgba(235, 245, 255, 0.7);
+	border: 3px ridge silver;
+	border-radius: 8px;
+	padding: 5px;
+}
+
+.grad {
+	font-family: gradient, sans-serif;
+	font-size: 1.5em;
+	line-height: 1.4em;
+}
+
+.sans {
+	font-family: sans-serif;
+}
+
+.small {
+	font-size: small;
+}
+
+input.link {
+	border: 0;
+	text-decoration: underline;
+	background: none;
+	color: blue;
+	padding: 0;
+	font-size: large;
+	cursor: pointer;
+}
+
+input {
+	margin: 5px;
+}
+
+.center {
+	margin: auto;
+	text-align: center;
+}
+
+.error {
+	color: red;
+}
+
+div.right {
+	text-align: right;
+}

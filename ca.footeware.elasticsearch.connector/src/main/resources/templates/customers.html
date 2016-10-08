@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Customers</title>
+<link rel="stylesheet" type="text/css" href="../static/css/screen.css"
+	th:href="@{/css/screen.css}" />
+<script th:src="@{/js/script.js}"></script>
+</head>
+<body>
+	<header>
+		<h1>Customers</h1>
+	</header>
+	<section>
+		<ol>
+			<li th:each="customer:${customers}" class="grad"><span
+				th:text="${customer.firstName}">FirstName</span>&nbsp;<span
+				th:text="${customer.lastName}">LastName</span> <a class="sans small"
+				th:href="@{'/customers/' + ${customer.id}}">Edit</a> <a href="#"
+				class="sans small"
+				th:onclick="'deleteCustomer(\'' + ${customer.id} + '\');'">Delete</a>
+			</li>
+		</ol>
+		<div class="right">
+			<a th:href="@{'/customers/-1'}">Add</a>&nbsp;&nbsp;<a
+				th:href="@{'/customers/search'}">Search</a>&nbsp;&nbsp;<a
+				href="/customers">Show All</a>&nbsp;&nbsp;<a href="/">Indices</a>
+		</div>
+	</section>
+</body>
+</html>

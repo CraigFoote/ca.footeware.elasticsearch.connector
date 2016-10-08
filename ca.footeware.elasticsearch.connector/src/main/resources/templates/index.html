@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Footeware.ca - Elasticsearch Connector</title>
+<link rel="stylesheet" type="text/css" href="../static/css/screen.css"
+	th:href="@{/css/screen.css}" />
+</head>
+<body>
+	<header>
+		<h1>Indices</h1>
+	</header>
+	<section>
+		<ul>
+			<li th:each="entry : ${indices}"><a th:href="@{${entry.key}}"
+				th:text="${entry.key}" class="grad"></a>&nbsp;<span class="grad"
+				th:text="'(' + ${entry.value} + ')'"></span></li>
+		</ul>
+	</section>
+</body>
+</html>

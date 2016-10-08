@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Customer Search</title>
+<link rel="stylesheet" type="text/css" href="../static/css/screen.css"
+	th:href="@{/css/screen.css}" />
+<script th:src="@{/js/script.js}"></script>
+</head>
+<body>
+	<header>
+		<h1>Customer Search</h1>
+	</header>
+	<section>
+		<p class="center error" id="errorDisplay" />
+		<form action="/customers/search" method="get">
+			<div class="center">
+				<input type="text" name="term" required="required"
+					autofocus="autofocus" />
+			</div>
+			<div class="right">
+				<input type="submit" value="Submit" class="link" /> <a href="/customers">Cancel</a>
+			</div>
+		</form>
+	</section>
+</body>
+</html>

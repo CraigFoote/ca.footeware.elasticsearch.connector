@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Add Customer</title>
+<link rel="stylesheet" type="text/css" href="../static/css/screen.css"
+	th:href="@{/css/screen.css}" />
+<script th:src="@{/js/script.js}"></script>
+</head>
+<body>
+	<header>
+		<h1 th:text="${mode}">Customer</h1>
+	</header>
+	<section>
+		<p class="center error" id="errorDisplay" />
+		<form action="#">
+			<table class="center">
+				<tr>
+					<td><label for="firstName">First Name:</label></td>
+					<td><input type="text" name="firstName" required="required"
+						autofocus="autofocus"
+						th:value="${(customer != null) ? customer.firstName : ''}" /></td>
+				</tr>
+				<tr>
+					<td><label for="lastName">Last Name:</label></td>
+					<td><input type="text" name="lastName" required="required"
+						th:value="${(customer != null) ? customer.lastName : ''}" /></td>
+				</tr>
+			</table>
+			<div class="right">
+				<a th:if="${customer == null}" href="#" onclick="addCustomer()">Submit</a>
+				<a th:if="${customer != null}" href="#"
+					th:onclick="'updateCustomer(\'' + ${customer.id} + '\')'">Submit</a>
+				<a href="/customers">Cancel</a>
+			</div>
+		</form>
+	</section>
+</body>
+</html>
